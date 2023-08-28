@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900")
+
+body
+    background: rgb(2, 0, 36)
+    background: linear-gradient(311deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)
+    height: 100%
+    margin: 0
+    background-repeat: no-repeat
+    background-attachment: fixed
+
+#root
+    max-width: 1280px
+    margin: 0 auto
+    padding: 2rem
+    text-align: center
+
+.logo
+    height: 6em
+    padding: 1.5em
+    will-change: filter
+    transition: filter 300ms
+    &:hover
+        filter: drop-shadow(0 0 2em #646cffaa)
+
+    &.react:hover
+        filter: drop-shadow(0 0 2em #61dafbaa)
+
+@keyframes logo-spin
+    from
+        transform: rotate(0deg)
+
+    to
+        transform: rotate(360deg)
+
+@media (prefers-reduced-motion: no-preference)
+a:nth-of-type(2) .logo
+    animation: logo-spin infinite 20s linear
+
+.error
+    color: red
+
+    &span
+        font-size: 0.7rem
+        font-weight: 700
+
+@mixin text-style
+    background-size: auto auto
+    background-clip: border-box
+    background-size: 200% auto
+    color: #fff
+    background-clip: text
+    text-fill-color: transparent
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    animation: textclip 2s linear infinite
+
+.birthday-wishes-container
+    font-size: 1rem
+    font-weight: 800
+
+    & div span
+        background: -webkit-linear-gradient(#b60280, #fffbfc)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    & div span.wished-name
+        font-size: 1rem
+        text-transform: uppercase
+        background-image: linear-gradient(-225deg, #aee728 0%, #ff0c0c 29%, #005021 67%, #fa0dab 100%)
+        @include text-style
+
+    & p:nth-of-type(1)
+        background-image: linear-gradient(-225deg, #231557 0%, #5100a8 29%, #ff1361 67%, #fff800 100%)
+        @include text-style
+    div span
+        background-image: linear-gradient(-225deg, #231557 0%, #027a0c 29%, #a10539 67%, #ebe774 100%)
+        @include text-style
+
+@keyframes textclip
+    to
+        background-position: 200% center
+.strikethrough
+    text-decoration: line-through
+
+.card
+    position: relative
+    width: 300px
+    height: 420px
+    border: 10px solid #9612eb
+    margin: 60px auto 0 auto
+    box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1)
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: #e6f0e6
+
+    & .text-container
+        width: 80%
+        height: 80%
+        margin: auto
+
+    .text-container #head
+        font-family: 'Nobile', sans-serif
+        font-size: 1.5em
+        margin: 60px auto 60px auto
+
+    p
+        font-size: 1.1em
+        line-height: 1.4
+        font-family: 'Nobile'
+        color: #331717
+        font-style: italic
+        text-align: center
+        margin: 30px auto 0px auto
+
+    .front
+        position: absolute
+        width: 100%
+        height: 100%
+        margin: -10px 0px 0px -10px
+        border: 10px solid #9612eb
+        backface-visibility: hidden
+        background-color: #9612eb
+        /* background-image: url($cover-image)*/
+        background-size: contain
+        transform-style: preserve-3d
+        transform-origin: 0% 50%
+        transform: perspective(800px) rotateY(0deg)
+        transition: all 0.8s ease-in-out
+
+    &:hover .front
+        transform: perspective(800px) rotateY(-170deg)
+        background-color: #41718d
+
+    &:hover .back
+        transform: perspective(800px) rotateY(-170deg)
+        box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1)
+        background-color: #d2dcd2
+
+    .back
+        position: absolute
+        width: 100%
+        height: 100%
+        border: 10px solid #9612eb
+        margin: -10px 0px 0px -10px
+        backface-visibility: visible
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5))
+        transform-style: preserve-3d
+        transform-origin: 0% 50%
+        transform: perspective(800px) rotateY(0deg)
+        transition: all 0.8s ease-in-out
+        background-color: #e6f0e6
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1)
+
+.imgset
+    position: relative
+    z-index: 1
+    margin-bottom: -215px
+
+    & img
+        box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22)
+        border-radius: 5px
