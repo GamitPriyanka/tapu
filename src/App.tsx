@@ -82,7 +82,7 @@ function App() {
                         </div>
                         <div className="text-container">
                             <p id="head">Happy Birthday!</p>
-                            <h5>From Hiren to You</h5>
+                            <h4>પ્રિયંકા(ફોઈ) તરફથી</h4>
                             <div
                                 className="birthday-wishes-container"
                                 dangerouslySetInnerHTML={{ __html: appState.message }}
